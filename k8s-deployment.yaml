@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sysadm-friend
+spec:
+  template:
+    metadata:
+      labels:
+        name: sysadm-friend
+    spec:
+      containers:
+      - image: microwaves/sysadm-friend:latest
+        name: sysadm-friend
+      restartPolicy: Always
